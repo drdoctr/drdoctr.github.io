@@ -10,6 +10,6 @@ env:
 
 script:
   - set -e
-  - pip install doctr
+  - pip install doctr git+https://github.com/drdoctr/doctr@avoid_doctr_doctr_doctr
   # Test that doctr does nothing when run against its own commits
   - doctr deploy --built-docs . .
