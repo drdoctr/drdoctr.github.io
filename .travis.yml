@@ -1,3 +1,5 @@
+language: python
+
 env:
   global:
     # Doctr deploy key for drdoctr/drdoctr.github.io
