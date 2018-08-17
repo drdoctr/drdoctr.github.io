@@ -1,0 +1,10 @@
+env:
+  global:
+    # Doctr deploy key for drdoctr/drdoctr.github.io
+    - secure: "U0Plvt5KwLYIIYqfdBoM0UDBufUkANf4OWxA+geXepoQG4+wX/V/GrnbV1vpgFbqzh+mCtKF9T4dvJMwYoxzyRuqef/ZdeWJORiI5sp8JnwU6XP//RE/NLqKLyujykBdJF0tYPRsyt7gL6F/twQx4UocRStNzPwwEDDb4IUxJhAEzuL6+/8IyeFE786kMx6RBsp/V1SpqplE+kYHjmNBDhNRG+RmAjQO1mhb0OT6W1wvZ7Q0AHzoDN/lvv1Zx7kksOqEupB999GpqWP9yyaYhxo0KjIVvNlIpDWFFLr3NOr0ZzLJOmWRWavxIClLJkv7NIKF3jCi8ekGpr23VHTLKVCF9Vryt8UNrS9EU17euqszMAcUn8UakNWlwVvi7duiuQTWoTI/nW/15NoAalS9w+Lv5SpTSJU0x9eUEIz9VSkf58wS0uyXXcVJIJy+k+TWmHKI/AE5xjm29iDNtlwyTgoqbtJj6Siwy1sYXAvmiXzKwfdbaJIlV73H/Y9Xl600meHb57nhixiDVfjUCxdJitFyISNOwtkVgft9MDJoKCsWO1yriIy5FSQ80ITW+/dkcrjt5/quRVlF4hOFbhiOMqahgk/5YlTEn1RJ0e8y4XKNtthxCAj3nnWYIS019R6gwjkMYZPwwwHlN8gaN3/cpwZ8gQIlf94MSuyGJKENHwg="
+
+script:
+  - set -e
+  - pip install doctr
+  # Test that doctr does nothing when run against its own commits
+  - doctr deploy --built-docs . .
