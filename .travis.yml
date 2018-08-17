@@ -13,4 +13,5 @@ script:
   - echo test >> test-file
   - pip install doctr git+https://github.com/drdoctr/doctr@avoid_doctr_doctr_doctr
   # Test that doctr does nothing when run against its own commits
+  - doctr --version
   - doctr deploy --built-docs . .
